@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+<head>
+ 	<link rel="stylesheet" type="text/css" href="stylex.css">
+ </head>
+<body>
+	<nav>
+		<div class="topnav" id="myTopnav">
+		<ul>
+      <li><a class="active" href="Reg.html">REGISTER</a></li>
+      <li><a  href="idex.php">HOME</a></li>
+         </ul>
+        <div class="logo">
+          <img src="logo.jpg" width="250" height="103">
+    </div>
+    <div class="hore-text">
+      <h1>MWONGORI HIGH SCHOOL</h1>      
+    </div>
+  </div>  
+    </nav>
+</body>
+    </nav>
+</body>
+<div class="content">
+<body >
+	<fieldset>
+       <div class="hero-text">
+        <legend>
+          <tittle>
+		<button style="background-color: black"><font style="font-size: 50px" color="yellow">Clubs/<br>Society<br>FORM</font></button>
+</tittle>
+</legend>
+</div>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<body style="background-color: silver; width: 80%; padding-left: 6.5%;">
+  <form action="include.php" method="POST">
+  <div class="row">
+    <div colspan="5">
+      <label for="fname">First Name</label>
+    </div>
+    <div colspan="5">
+      <input type="text" id="Fname" name="Firstname" placeholder="Your name" required>
+    </div>
+  </div>
+<p>&nbsp;</p>
+<div class="row">
+    <div colspan="5">
+      <label for="lname">Surname</label>
+    </div>
+    <div colspan="5">
+      <input type="text" id="Surname" name="Surname" placeholder="Your surname" required>
+    </div>
+  </div>
+<p>&nbsp;</p>
+<div class="row">
+    <div colspan="5">
+      <label for="lname">Last Name</label>
+    </div>
+    <div colspan="5">
+      <input type="text" id="Lastname" name="Lastname" placeholder="Your last name" required>
+    </div>
+  </div>
+  <p>&nbsp;</p>
+  <div class="row">
+    <div colspan="5">
+      <label for="lname">StudentID</label>
+    </div>
+    <div colspan="5">
+      <input type="number" id="StudentID" name="StudentID" placeholder="Your StudentID" required>
+    </div>
+  </div>
+  <p>&nbsp;</p>
+ <div class="row">
+    <div colspan="5">
+      <label for="Birthday">Birthday:</label>
+    </div>
+  <div>
+<input type="date" name="Birthday" required>
+</div>
+</div>
+<p>&nbsp;</p>
+<div class="row">
+  <label for="gender">Genger:</label>
+</div>
+<div>
+<input type="radio" name="Gender" value="male" required> Male
+<input type="radio" name="Gender" value="female" required> Female
+<input type="radio" name="Gender" value="other" required> Other
+</div>
+<p>&nbsp;</p>
+ <p ng-app="myApp" ng-controller="validateCtrl" name="myp" novalidate>Email:<br>
+<input type="email" name="email" ng-model="email" required>
+<span style="color:red" ng-show="myForm.email.$dirty && myForm.email.$invalid">
+<span ng-show="myForm.email.$error.required">Email is required.</span>
+<span ng-show="myForm.email.$error.email">Invalid email address.</span>
+</span>
+</p>
+<script>
+var app = angular.module('myApp', []);
+app.controller('validateCtrl', function($scope) {
+    $scope.email = 'example(17)@gmail.com';
+});
+</script>
+<p>&nbsp;</p>
+<h2>SPORTS</h2>
+<input type="radio"  id="Indoors" name="Sport"><font size="5">Indoors</font><br>
+<select name="Indoors" required="Indoors">
+  <option value="NULL">...</option>
+  <option value="T.Tenis">Table Tenis</option>
+  <option value="Floorball">Floorball</option>
+  <option value="BasketBall">BasketBall</option>
+  <option value="Chase">Chase</option>
+  <option value="Karate">Karate</option>
+  <option value="Judo">Judo</option> 
+  </select>
+<p>&nbsp;</p>
+<input type="radio"  id="Outdoors" name="Sport"><font size="5">Outdoors</font><br>
+<select  name="Outdoors" required="Outdoors">
+  <option value="NULL">......</option>
+  <option value="Rugby">Rugby</option>
+  <option value="Soccer">Soccer</option>
+  <option value="American Football">American Football</option>
+  <option value="Bike">Bike race</option>
+  <option value="Race Course">Race course</option>
+  <option value="Athletics">Athletics</option> 
+  </select>
+<p>&nbsp;</p>
+<h2>CLUBS AND SOCIETIES:</h2>
+<input type="radio" id="Science" name="Clubsociety"><font size="5">Science Clubs</font><br>
+<select name="Science" required="Science">
+  <option value="NULL">.....</option>
+  <option value="Math Club">Mathematics Club</option>
+  <option value="Chemistry Club">Chemistry Club</option>
+  <option value="Biology Club">Biology Club</option>
+  <option value="Physics Club">Physics Club</option>
+  <option value="IT Club">Technology Club</option>
+  <option value="Innovation Club">Innovation Club</option>
+</select><br>
+<p>&nbsp;</p>
+<input type="radio" id="General" name="Clubsociety"><font size="5">General Club</font><br>
+<select name="General" required="General">
+	<option value="NULL">.......</option>
+  <option value="Drama Club">Drama Club</option>
+  <option value="Music Club">Music Club</option>
+  <option value="Environment club">Environment Club</option>
+  <option value="Debate Club">Debate Club</option>
+</select><br>
+<p>&nbsp;</p>
+<input type="radio" id="Societies" name="Clubsociety"><font size="5">Societies</font><br>
+<select name="Societies" required="Societies">
+	<option value="NULL">......</option>
+  <option value="Scouts">Scouts</option>
+  <option value="First Aid & Emergency">First Aid & Emergency</option>
+  <option value="Mind Test">Mind test</option>
+</select>
+<p>&nbsp;</p>
+<div class="row">
+    <div colspan="5">
+      <label for="subject">Comment/View/C.V</label>
+    </div>
+    <div colspan="5">
+      <textarea id="subject" name="Comments" placeholder="Anything we should know of......." 
+      style="height:200px" required="Comments"></textarea>
+    </div>
+  </div>
+  <p>&nbsp;</p>
+<center>
+<button style="background-color: black" type="button"
+onclick="alert('FEEL MOST WELCOMED!')"><font size="5" color="green">CLICK ME!</font></button>
+</center>
+<p>&nbsp;</p>
+<div class="row">
+  <input type="RESET" name="RESET">
+</div>
+<p>&nbsp;</p>
+<div class="row">
+    <input type="SUBMIT" value="SUBMIT">
+  </div>
+</body>
+</div>
+</fieldset>
+<div class="footer">
+		<h1>WHAT BEGINS HERE TRANSFORMS THE WORLD</h1>
+</div>
+</form>
+</html>

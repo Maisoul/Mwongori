@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="stylex.css">
+</head>
+<body>
+  <nav>
+    <div class="topnav" id="myTopnav">
+    <ul>
+      <li><a class="active" href="FeeStatement.html">FEE</a></li>
+      <li><a  href="redix.php">HOME</a></li>
+         </ul>
+
+        <div class="log">
+          <img src="std.jpg" width="250" height="103">
+    </div>
+    <div class="hore-text">
+      <h1>MWONGORI HIGH SCHOOL</h1>      
+    </div>
+  </div>  
+    </nav>
+</body>
+<div class="content">
+<body>
+  <fieldset>
+       <div class="hero-text">
+        <legend>
+          <tittle>
+    <button style="background-color: black"><font style="font-size: 50px" color="yellow">Fees<br>Payment</font></button>
+</tittle>
+</legend>
+</div>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<body style="background-color: silver; width: 78%; padding-left: 9.5%;">
+  <form action="insert.php" method="POST">
+  <div class="row">
+    <div colspan="5">
+      <label for="Stname"><font size="5">Student Name</font></label>
+    </div>
+    <div colspan="5">
+      <input type="text" id="Stname" name="Studentname" placeholder="Your name.." required>
+    </div>
+  </div>
+<p>&nbsp;</p>
+  <div class="div1">
+    <div colspan="5">
+      <label for="StudentID"><font size="5"> StudentID</font></label>
+    </div>
+    <div colspan="5">
+      <input type="number" id="ID" name="StudentID" placeholder="Your Student number.." required>
+    </div>
+  </div>
+  <p>&nbsp;</p>
+  <div class="div1">
+    <div colspan="5">
+     <label for="phone"><font size="5"> Parent phone number:</font></label> 
+    </div>
+    <div colspan="5">
+      <input type="tel" id="telNo" name="telNo" placeholder="0723445678" pattern="[0-9]{10}" required><br>
+  <small>Format: 0232453678</small><br><br>
+    </div>
+  </div>
+  <p>&nbsp;</p>
+  <p ng-app="myApp" ng-controller="validateCtrl" name="myp" novalidate>Email:<br>
+<input type="email" name="email" ng-model="email" required>
+<span style="color:red" ng-show="myp.email.$dirty && myp.email.$invalid">
+<span ng-show="myp.email.$error.required">Email is required.</span>
+<span ng-show="myp.email.$error.email">Invalid email address.</span>
+</span>
+</p>
+<script>
+var app = angular.module('myApp', []);
+app.controller('validateCtrl', function($scope) {
+    $scope.email = 'example(17)@gmail.com';
+});
+</script>
+  <p>&nbsp;</p>
+  <h3>Check the fee structure and make the payments according to the students' year: <a href="fees.html"> Fee Structure</a></h3>
+  <p>&nbsp;</p>
+  <h2>Fees Paid</h2>
+      <label for="Tution"><font size="5">Tution Fee</font></label><br>
+      <input type="number" id="Amount1" name="Tuitionfee" placeholder="Amount.." required>
+  <p>&nbsp;</p>
+      <label for="Library"><font size="5">Library</font></label><br>
+      <input type="number" id="Amount2" name="Library" placeholder="Amount.." required>
+  <p>&nbsp;</p>
+      <label for="Activity"><font size="5">Activity</font></label><br>
+      <input type="number" id="Amount3" name="Activity" placeholder="Amount.." required>
+  <p>&nbsp;</p>
+      <label for="caution"><font size="5">Caution money</font></label><br>
+      <input type="number" id="Amount4" name="cautionmoney" placeholder="Amount.." required="caution">
+  <p>&nbsp;</p>
+      <label for="expenses"><font size="5">Other Expenses</font></label><br>
+      <input type="number" id="Amount5" name="otherexpenses" placeholder="Amount.." required="Expenses">
+  <p>&nbsp;</p>
+<button style="background-color: black" type="button"
+onclick="calculate()"><font size="5" color="green">TOTAL!</font></button>
+<script>
+  function calculate()
+  {
+    var field1=document.getElementById("Amount1").value;
+    var field2=document.getElementById("Amount2").value;
+    var field3=document.getElementById("Amount3").value;
+    var field4=document.getElementById("Amount4").value;
+    var field5=document.getElementById("Amount5").value;
+
+    var result=parseFloat(field1)+parseFloat(field2)+parseFloat(field3)+parseFloat(field4)+parseFloat(field5);
+    if (!isNaN(result)) {
+      document.getElementById("total").innerHTML ="You paid" +result
+    }
+  }
+</script>
+<p>&nbsp;</p>
+<p id="total"></p>
+    <label for="total"><font size="5">Total</font></label>
+    <input type="number" name="total" id="total" required="total">
+   <p>&nbsp;</p>
+<div class="row">
+  <input type="RESET" name="RESET">
+</div>
+<p>&nbsp;</p>
+  <div class="row">
+    <input type="SUBMIT" value="FINALIZE">
+  </div>
+</form>
+</fieldset>
+</body>
+<div class="footer">
+    <h1>WHAT BEGINS HERE TRANSFORMS THE WORLD</h1>
+</div>
+</html>
